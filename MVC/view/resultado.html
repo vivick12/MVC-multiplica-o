@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado do Cálculo</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultado do Cálculo</h1>
+        <div id="resultado"></div>
+        <br>
+        <div class="img">
+            <img src="panda.jpg" alt=""> 
+        </div>
+       
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const resultado = parseFloat(urlParams.get('resultado'));
+        document.getElementById('resultado').innerText = ` ${resultado}`;
+    </script>
+</body>
+</html>
